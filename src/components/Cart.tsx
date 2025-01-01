@@ -18,7 +18,7 @@ export function Cart({ items, onRemoveFromCart, onClose }: CartProps) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <ShoppingBag className="text-zinc-400" />
-              <h2 className="text-xl sm:text-2xl font-semibold">Shopping Cart</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold">Carrinho de Compras</h2> {/* Traduzido */}
             </div>
             <button
               onClick={onClose}  // Chama a função onClose quando o botão de fechar é clicado
@@ -33,7 +33,7 @@ export function Cart({ items, onRemoveFromCart, onClose }: CartProps) {
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-zinc-400">
               <ShoppingBag size={48} className="mb-4 opacity-20" />
-              <p>Your cart is empty</p>
+              <p>Seu carrinho está vazio</p> {/* Traduzido */}
             </div>
           ) : (
             <div className="p-4 space-y-4">
@@ -46,7 +46,7 @@ export function Cart({ items, onRemoveFromCart, onClose }: CartProps) {
                   />
                   <div className="flex-1">
                     <h3 className="font-medium text-sm sm:text-base">{item.name}</h3>
-                    <p className="text-xs sm:text-sm text-zinc-400">${item.price.toFixed(2)}</p>
+                    <p className="text-xs sm:text-sm text-zinc-400">R${item.price.toFixed(2)}</p> {/* Atualizado para R$ */}
                   </div>
                   <button
                     onClick={() => onRemoveFromCart(item.id)}
@@ -62,11 +62,11 @@ export function Cart({ items, onRemoveFromCart, onClose }: CartProps) {
 
         <div className="p-4 border-t border-zinc-800">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-zinc-400">Total:</span>
-            <span className="text-xl font-bold">${total.toFixed(2)}</span>
+            <span className="text-zinc-400">Total:</span> {/* Traduzido */}
+            <span className="text-xl font-bold">R${total.toFixed(2)}</span> {/* Atualizado para R$ */}
           </div>
           <button className="w-full bg-white text-black py-3 rounded-lg font-medium hover:bg-zinc-200 transition-colors">
-            Checkout
+            Finalizar Compra {/* Traduzido */}
           </button>
         </div>
       </div>
