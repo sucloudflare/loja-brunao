@@ -20,14 +20,17 @@ export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              {/* Menu Button */}
-              <button onClick={toggleMenu} className="lg:hidden">
-                <Menu className="h-6 w-6 text-white" />
+              {/* Menu Button (somente no mobile) */}
+              <button 
+                onClick={toggleMenu} 
+                className="lg:hidden text-white"
+              >
+                <Menu className="h-6 w-6" />
               </button>
-              <h1 className="text-2xl font-bold tracking-wider">BRUNO SHOP</h1>
+              <h1 className="text-2xl font-bold tracking-wider">BRUNO DESTAQUE</h1>
             </div>
 
-            {/* Desktop Navigation */}
+            {/* Navegação Desktop */}
             <nav className="hidden lg:flex items-center gap-8">
               <a href="#" className="text-sm hover:text-gray-300 transition-colors">NOVIDADES</a>
               <a href="#" className="text-sm hover:text-gray-300 transition-colors">ROUPAS</a>
@@ -35,7 +38,7 @@ export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
               <a href="#" className="text-sm hover:text-gray-300 transition-colors">ACESSÓRIOS</a>
             </nav>
 
-            {/* Icons */}
+            {/* Ícones de Pesquisa e Carrinho */}
             <div className="flex items-center gap-4">
               <Search className="h-5 w-5 text-gray-300 hover:text-white cursor-pointer" />
               <button
@@ -54,7 +57,7 @@ export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
         </div>
       </header>
 
-      {/* SideMenu */}
+      {/* SideMenu (aparece quando o menu é aberto no mobile) */}
       {isMenuOpen && <SideMenu />}
     </>
   );
