@@ -24,7 +24,7 @@ export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
               <button onClick={toggleMenu} className="lg:hidden">
                 <Menu className="h-6 w-6 text-white" />
               </button>
-              <h1 className="text-2xl font-bold tracking-wider">BRUNO DESTAQUE</h1>
+              <h1 className="text-2xl font-bold tracking-wider">BRUNO SHOP</h1>
             </div>
 
             {/* Desktop Navigation */}
