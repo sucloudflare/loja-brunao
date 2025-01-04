@@ -45,3 +45,78 @@
   transform: translateY(0);
   transition: none; /* Remove quaisquer transições */
 }
+
+/* Media Query para dispositivos com largura até 768px */
+@media (max-width: 768px) {
+  body {
+    width: 100%; /* Permite que a largura ocupe 100% da tela em dispositivos menores */
+    margin: 0 auto;
+    overflow-x: hidden; /* Evita barras de rolagem horizontais */
+  }
+
+  .container {
+    width: 95%; /* Aumenta a largura do container para 95% em dispositivos menores */
+    margin: 0 auto;  /* Centraliza o conteúdo */
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;  /* Modifica para 1 coluna em telas menores */
+  }
+}
+
+/* Menu Mobile */
+@media (max-width: 480px) {
+  /* Diminui o tamanho da fonte para melhorar a leitura */
+  .text-xl {
+    font-size: 1.125rem; /* Ajusta o tamanho de fonte para telas pequenas */
+  }
+
+  .text-lg {
+    font-size: 1rem; /* Reduz o tamanho de fonte para títulos */
+  }
+
+  .text-base {
+    font-size: 0.875rem; /* Texto pequeno, como links */
+  }
+
+  /* Ajusta o menu para ser mais estreito e centralizado */
+  .fixed {
+    width: 90%; /* Diminui a largura do menu */
+    max-width: 320px; /* Limita a largura do menu */
+    left: 5%; /* Centraliza o menu */
+  }
+
+  /* Aumenta o espaço entre os itens */
+  .space-y-2 {
+    margin-bottom: 1rem; /* Maior espaçamento entre os itens */
+  }
+
+  /* Ajuste de espaçamento nos botões */
+  .p-4 {
+    padding: 1rem; /* Menos padding para compactar o menu */
+  }
+
+  .mb-6 {
+    margin-bottom: 1.5rem; /* Ajusta o espaçamento entre os itens */
+  }
+}
+
+@media (max-width: 360px) {
+  /* Reduz ainda mais o tamanho da fonte para telas muito pequenas */
+  .text-xl {
+    font-size: 1rem; /* Tamanho de fonte muito pequeno */
+  }
+
+  .text-lg {
+    font-size: 0.875rem; /* Menor tamanho de fonte para os títulos */
+  }
+
+  .text-base {
+    font-size: 0.75rem; /* Texto ainda menor para links e outros textos */
+  }
+
+  /* Aumenta o tamanho do botão de fechar */
+  .p-2 {
+    padding: 0.5rem;
+  }
+}

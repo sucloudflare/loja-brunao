@@ -46,7 +46,7 @@ export function SideMenu() {
         ></div>
 
         {/* Menu Lateral */}
-        <div className="fixed w-72 h-full bg-zinc-900/50 backdrop-blur-xl p-4 rounded-2xl z-50">
+        <div className="fixed w-72 sm:w-80 md:w-96 lg:w-[20rem] h-full bg-zinc-900/50 backdrop-blur-xl p-4 rounded-2xl z-50">
           {/* Botão de fechar X no lado direito */}
           <button
             onClick={closeMenu}

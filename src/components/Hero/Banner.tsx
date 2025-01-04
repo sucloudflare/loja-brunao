@@ -16,8 +16,8 @@ export function Banner() {
       <div className="absolute inset-0 bg-black/40" />
       
       <div className="relative h-full flex items-center">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-6xl font-bold text-white mb-6 animate-fade-in">
               PERFORMANCE ELEVADO
             </h1>
