@@ -14,7 +14,7 @@ export function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 text-white">
         <AnimatedText delay={200}>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-text-shimmer">
-            Bruno Collection
+            LUXE Collection
           </h1>
         </AnimatedText>
         
