@@ -10,7 +10,7 @@ export function Banner() {
         loop
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://brand.assets.adidas.com/video/upload/q_auto,vc_auto/video/upload/running-ss22-ultraboost-launch-hp-masthead-large-3d-d_yfbvna.mp4" type="video/mp4" />
+        <source src="https://www.youtube.com/embed/qw5gGZx054c?si=JG4bmO889giiyPzq" type="video/mp4" />
       </video>
       
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
