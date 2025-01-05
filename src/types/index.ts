@@ -5,6 +5,7 @@ export interface Product {
   image: string;
   description: string;
   category: string;
+<<<<<<< HEAD
   subcategory?: string;
   featured: boolean;
   isNew: boolean;
@@ -12,6 +13,11 @@ export interface Product {
   color: string;
   sizes: string[];
   brand: string;
+=======
+  featured: boolean;
+  isNew: boolean;
+  onSale: boolean;
+>>>>>>> 1d1f998a0f24ed4c069103bc379e110b52e77bc5
 }
 
 export interface CartItem extends Product {
