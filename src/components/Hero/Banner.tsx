@@ -6,7 +6,7 @@ export function Banner() {
     <div className="relative h-screen">
       <iframe
         className="absolute inset-0 w-full h-full object-cover right-[600px]"
-        src="https://www.youtube.com/embed/qw5gGZx054c?autoplay=1&loop=1&playlist=qw5gGZx054c&controls=0&showinfo=0&modestbranding=1&rel=0"
+        src="https://www.youtube.com/embed/qw5gGZx054c?autoplay=1&loop=1&playlist=qw5gGZx054c&controls=0&showinfo=0&modestbranding=1&rel=0&mute=1"
         title="Video Banner"
         frameBorder="0"
         allow="autoplay; fullscreen"
