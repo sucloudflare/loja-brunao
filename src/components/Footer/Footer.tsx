@@ -4,7 +4,7 @@ import { NewsletterForm } from '../Newsletter/NewsletterForm';
 
 export function Footer() {
   return (
-    <footer className="bg-zinc-900 h-screen flex text-white py-16">
+    <footer className="bg-zinc-800 h-screen flex text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -34,8 +34,8 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Newsletter</h4>
-            <p className="text-zinc-400 mb-4">
+            <h4 className="font-semibold mb-3">Newsletter</h4>
+            <p className="text-zinc-370 mb-3">
               Receba ofertas exclusivas e novidades.
             </p>
             <NewsletterForm />
