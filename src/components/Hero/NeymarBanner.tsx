@@ -29,7 +29,7 @@ export function NeymarBanner() {
   {/* Vídeo oculto como fundo com áudio */}
   <iframe
     className="absolute inset-0 w-full h-full object-cover opacity-0"
-    src="https://www.youtube.com/embed/s4oA5CRC1us?autoplay=1&loop=1&playlist=s4oA5CRC1us&controls=0&showinfo=0&modestbranding=1&rel=0&mute=0"
+    src="https://www.youtube.com/embed/s4oA5CRC1us?autoplay=1&loop=1&playlist=s4oA5CRC1us&controls=0&showinfo=0&modestbranding=1&rel=0&mute=1"
     title="Video Banner"
     frameBorder="0"
     allow="autoplay; fullscreen"
@@ -38,6 +38,7 @@ export function NeymarBanner() {
   {/* Overlay com opacidade */}
   <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
 </div>
+
 
     </div>
   );
