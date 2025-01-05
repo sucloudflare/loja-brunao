@@ -1,11 +1,9 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
-import { NewsletterForm } from '../Newsletter/NewsletterForm';
 
 export function Footer() {
   return (
-    <footer className="bg-zinc/95 backdrop-blur-sm h-screen flex fix
-ed w-full z-50 text-white py-16">
+    <footer className="bg-zinc/900 h-screen flex text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -32,14 +30,6 @@ ed w-full z-50 text-white py-16">
               <li>(11) 99999-9999</li>
               <li>São Paulo, SP</li>
             </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-3">Newsletter</h4>
-            <p className="text-zinc-370 mb-3">
-              Receba ofertas exclusivas e novidades.
-            </p>
-            <NewsletterForm />
           </div>
         </div>
         
