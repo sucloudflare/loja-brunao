@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { ProductCard } from './components/ProductCard';
-import { ProductFilters } from './components/ProductFilters';
-import { Cart } from './components/Cart';
-import { SideMenu } from './components/SideMenu';
+import { Toaster } from 'react-hot-toast';
+import { SearchBar } from './components/Navbar/SearchBar';
+import { MegaMenu } from './components/Navigation/MegaMenu';
+import { MobileMenu } from './components/Navbar/MobileMenu';
+import { Banner } from './components/Hero/Banner';
+import { NeymarBanner } from './components/Hero/NeymarBanner';
+import { ProductSections } from './components/Products/ProductSections';
+import { AthletesSection } from './components/Athletes/AthletesSection';
+import { CartSidebar } from './components/Cart/CartSidebar';
+import { QRCodePayment } from './components/Payment/QRCodePayment';
+import { Footer } from './components/Footer/Footer';
+import { CookieConsent } from './components/CookieConsent/CookieConsent';
+import { Menu, ShoppingBag } from 'lucide-react';
 import { products } from './data/products';
-import { filterProducts } from './utils/filters';
 import { Product } from './types';
+import { useCookieConsent } from './hooks/useCookieConsent';
+import { sendOrderConfirmation } from './services/email';
 
 function App() {
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [priceRange, setPriceRange] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showPayment, setShowPayment] = useState(false);
+  const { showConsent, acceptCookies } = useCookieConsent();
 
   const addToCart = (product: Product) => {
     setCartItems([...cartItems, product]);
@@ -23,55 +32,89 @@ function App() {
     setCartItems(cartItems.filter(item => item.id !== productId));
   };
 
-  const filteredProducts = filterProducts(products, selectedCategory, priceRange);
+  const handleCheckout = async () => {
+    setShowPayment(true);
+    setIsCartOpen(false);
+    
+    await sendOrderConfirmation({
+      items: cartItems,
+      total: cartItems.reduce((sum, item) => sum + item.price, 0),
+      paymentMethod: 'PIX',
+      email: 'cliente@exemplo.com'
+    });
+  };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Header 
-        cartItemsCount={cartItems.length}
-        onCartClick={() => setIsCartOpen(true)}
-      />
-
-      <Hero />
-
-      <main className="max-w-7xl mx-auto px-4 py-16">
-        <div className="flex gap-8">
-          <aside className="hidden lg:block sticky top-24 h-fit">
-            <SideMenu />
-          </aside>
-
-          <div className="flex-1">
-            <div className="mb-8">
-              <h2 className="text-3xl font-bold mb-2">Coleção em Destaque</h2>
-              <p className="text-zinc-400">Descubra nossos produtos premium mais recentes</p>
+    <div className="min-h-screen bg-black">
+      <Toaster position="top-right" />
+      
+      <header className="fixed w-full z-50 bg-black/95 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            <div className="flex items-center gap-4 lg:gap-12">
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="lg:hidden text-white"
+              >
+                <Menu size={24} />
+              </button>
+              <h1 className="text-2xl font-bold text-white">LUXE</h1>
+              <MegaMenu />
             </div>
-
-            <ProductFilters
-              selectedCategory={selectedCategory}
-              onCategoryChange={setSelectedCategory}
-              onPriceRangeChange={setPriceRange}
-            />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onAddToCart={addToCart}
-                />
-              ))}
+            
+            <div className="flex items-center gap-6">
+              <SearchBar />
+              <button
+                onClick={() => setIsCartOpen(true)}
+                className="relative text-white"
+              >
+                <ShoppingBag size={24} />
+                {cartItems.length > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                    {cartItems.length}
+                  </span>
+                )}
+              </button>
             </div>
           </div>
         </div>
+      </header>
+
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
+
+      <main className="pt-20">
+        <Banner />
+        <ProductSections products={products} onAddToCart={addToCart} />
+        <NeymarBanner />
+        <AthletesSection />
       </main>
 
+      <Footer />
+
       {isCartOpen && (
-        <Cart 
+        <CartSidebar
           items={cartItems}
-          onRemoveFromCart={removeFromCart}
           onClose={() => setIsCartOpen(false)}
+          onRemove={removeFromCart}
+          onProceedToCheckout={handleCheckout}
         />
       )}
+
+      {showPayment && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+          <div className="max-w-md w-full">
+            <QRCodePayment
+              total={cartItems.reduce((sum, item) => sum + item.price, 0)}
+              qrCodeUrl="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=00020126580014BR.GOV.BCB.PIX0136123e4567-e12b-12d1-a456-426655440000"
+            />
+          </div>
+        </div>
+      )}
+
+      {showConsent && <CookieConsent onAccept={acceptCookies} />}
     </div>
   );
 }

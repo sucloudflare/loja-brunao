@@ -8,18 +8,12 @@ export function useScrollAnimation() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Adicionamos opacity-100 e removemos opacity-0
-            entry.target.classList.remove('opacity-0');
-            entry.target.classList.add('opacity-100');
             entry.target.classList.add('animate-slide-up');
             observer.unobserve(entry.target);
           }
         });
       },
-      { 
-        threshold: 0.1,
-        rootMargin: '50px' // Começa a animação um pouco antes do elemento entrar na viewport
-      }
+      { threshold: 0.1 }
     );
 
     if (ref.current) {

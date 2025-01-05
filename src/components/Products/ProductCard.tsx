@@ -1,8 +1,8 @@
 import React from 'react';
 import { ShoppingCart, Heart } from 'lucide-react';
-import { Product } from '../types';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { formatPrice } from '../utils/format';
+import { Product } from '../../types';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { formatPrice } from '../../utils/format';
 
 interface ProductCardProps {
   product: Product;
