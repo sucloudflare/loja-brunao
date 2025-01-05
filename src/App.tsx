@@ -1,28 +1,17 @@
 import React, { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { SearchBar } from './components/Navbar/SearchBar';
-<<<<<<< HEAD
 import { MegaMenu } from './components/Navigation/MegaMenu';
 import { MobileMenu } from './components/Navbar/MobileMenu';
 import { Banner } from './components/Hero/Banner';
 import { NeymarBanner } from './components/Hero/NeymarBanner';
 import { ProductSections } from './components/Products/ProductSections';
 import { AthletesSection } from './components/Athletes/AthletesSection';
-=======
-import { CategoryMenu } from './components/Navbar/CategoryMenu';
-import { MobileMenu } from './components/Navbar/MobileMenu';
-import { Banner } from './components/Hero/Banner';
-import { ProductSections } from './components/Products/ProductSections';
->>>>>>> 1d1f998a0f24ed4c069103bc379e110b52e77bc5
 import { CartSidebar } from './components/Cart/CartSidebar';
 import { QRCodePayment } from './components/Payment/QRCodePayment';
 import { Footer } from './components/Footer/Footer';
 import { CookieConsent } from './components/CookieConsent/CookieConsent';
-<<<<<<< HEAD
 import { Menu, ShoppingBag } from 'lucide-react';
-=======
-import { Menu } from 'lucide-react';
->>>>>>> 1d1f998a0f24ed4c069103bc379e110b52e77bc5
 import { products } from './data/products';
 import { Product } from './types';
 import { useCookieConsent } from './hooks/useCookieConsent';
@@ -70,11 +59,7 @@ function App() {
                 <Menu size={24} />
               </button>
               <h1 className="text-2xl font-bold text-white">LUXE</h1>
-<<<<<<< HEAD
               <MegaMenu />
-=======
-              <CategoryMenu />
->>>>>>> 1d1f998a0f24ed4c069103bc379e110b52e77bc5
             </div>
             
             <div className="flex items-center gap-6">
@@ -83,10 +68,7 @@ function App() {
                 onClick={() => setIsCartOpen(true)}
                 className="relative text-white"
               >
-<<<<<<< HEAD
                 <ShoppingBag size={24} />
-=======
->>>>>>> 1d1f998a0f24ed4c069103bc379e110b52e77bc5
                 {cartItems.length > 0 && (
                   <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                     {cartItems.length}
@@ -106,11 +88,8 @@ function App() {
       <main className="pt-20">
         <Banner />
         <ProductSections products={products} onAddToCart={addToCart} />
-<<<<<<< HEAD
         <NeymarBanner />
         <AthletesSection />
-=======
->>>>>>> 1d1f998a0f24ed4c069103bc379e110b52e77bc5
       </main>
 
       <Footer />
