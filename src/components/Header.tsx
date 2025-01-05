@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
   return (
-    <header className="bg-black/95 backdrop-blur-sm fixed w-full h-full flex items-center z-50 text-white">
+    <header className="bg-black/95 backdrop-blur-sm fixed w-auto h-auto flex items-center z-50 text-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
             <a href="#" className="text-sm hover:text-gray-300 transition-colors">ACESSÓRIOS</a>
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Search className="h-5 w-5 text-gray-300 hover:text-white cursor-pointer" />
             <button
               onClick={onCartClick}
@@ -31,7 +31,7 @@ export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
             >
               <ShoppingBag className="h-5 w-5 text-gray-300 hover:text-white" />
               {cartItemsCount > 0 && (
-                <span className="absolute -top-1 -right-5 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-4 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                   {cartItemsCount}
                 </span>
               )}
