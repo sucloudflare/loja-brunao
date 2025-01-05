@@ -1,5 +1,4 @@
-import React from 'react';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Twitter } from 'react-feather';
 import { NewsletterForm } from '../Newsletter/NewsletterForm';
 
 export function Footer() {
@@ -13,42 +12,25 @@ export function Footer() {
               Sua loja de moda premium com as melhores marcas e tendências.
             </p>
           </div>
-
+          
           <div>
             <h4 className="font-semibold mb-4">Links Úteis</h4>
             <ul className="space-y-2 text-zinc-400">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Sobre Nós
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Política de Privacidade
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Termos de Uso
-                </a>
-              </li>
+              <li><a href="#" className="hover:text-white transition-colors">Sobre Nós</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Política de Privacidade</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Termos de Uso</a></li>
             </ul>
           </div>
-
+          
           <div>
             <h4 className="font-semibold mb-4">Contato</h4>
             <ul className="space-y-2 text-zinc-400">
-              <li>contato@luxe.com</li>
-              <li>(11) 99999-9999</li>
+              <li>Rua Exemplo, 123</li>
               <li>São Paulo, SP</li>
             </ul>
           </div>
-
+          
           <div>
             <h4 className="font-semibold text-lg mb-2">Newsletter</h4>
             <p className="text-zinc-400 text-sm mb-4">
@@ -57,32 +39,20 @@ export function Footer() {
             <NewsletterForm />
           </div>
         </div>
-
+        
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-zinc-800">
           <p className="text-zinc-400 text-sm mb-4 sm:mb-0">
             © 2024 LUXE. Todos os direitos reservados.
           </p>
-
+          
           <div className="flex gap-6">
-            <a
-              href="#"
-              aria-label="Facebook da Luxe"
-              className="text-zinc-400 hover:text-white transition-colors"
-            >
+            <a href="#" aria-label="Facebook da Luxe" className="text-zinc-400 hover:text-white transition-colors">
               <Facebook size={20} />
             </a>
-            <a
-              href="#"
-              aria-label="Instagram da Luxe"
-              className="text-zinc-400 hover:text-white transition-colors"
-            >
+            <a href="#" aria-label="Instagram da Luxe" className="text-zinc-400 hover:text-white transition-colors">
               <Instagram size={20} />
             </a>
-            <a
-              href="#"
-              aria-label="Twitter da Luxe"
-              className="text-zinc-400 hover:text-white transition-colors"
-            >
+            <a href="#" aria-label="Twitter da Luxe" className="text-zinc-400 hover:text-white transition-colors">
               <Twitter size={20} />
             </a>
           </div>
