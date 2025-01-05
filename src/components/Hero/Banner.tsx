@@ -4,17 +4,17 @@ import { ArrowRight } from 'lucide-react';
 export function Banner() {
   return (
     <div className="relative h-screen">
-      <video
-        autoPlay
-        muted
-        loop
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="https://www.youtube.com/embed/qw5gGZx054c?si=JG4bmO889giiyPzq" type="video/mp4" />
-      </video>
-      
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-      
+      <iframe
+        className="absolute inset-0 w-full h-full object-cover right-[600px]"
+        src="https://www.youtube.com/embed/qw5gGZx054c?autoplay=1&loop=1&playlist=qw5gGZx054c&controls=0&showinfo=0&modestbranding=1&rel=0"
+        title="Video Banner"
+        frameBorder="0"
+        allow="autoplay; fullscreen"
+      />
+
+      {/* Overlay com opacidade */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+
       <div className="relative h-full flex items-center">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl w-full">
