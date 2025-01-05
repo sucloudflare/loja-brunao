@@ -23,4 +23,7 @@
   }
   
   /* Ajustando o conteúdo centralizado dentro do body */
- 
+  footer{
+    max-width: 100vh;
+    min-width: 100vh;
+  }
