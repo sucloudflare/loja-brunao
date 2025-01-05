@@ -3,8 +3,8 @@ import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-zinc/900 h-screen flex text-white py-16">
-      <div className="container mx-auto px-4">
+    <footer className="bg-zinc/900 h-screen h-full flex items-center flex text-white py-16">
+      <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-4">LUXE</h3>
