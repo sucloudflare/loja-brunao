@@ -6,7 +6,7 @@ const categories = [
   { id: 'masculino', name: 'Masculino' },
   { id: 'feminino', name: 'Feminino' },
   { id: 'esportes', name: 'Esportes' },
-  { id: 'colecoes', name: 'Coleções' }
+  { id: 'colecoes', name: 'Coleções' },
 ];
 
 export function CategoryMenu() {
@@ -18,11 +18,7 @@ export function CategoryMenu() {
             <span>{category.name}</span>
             <ChevronDown size={16} />
           </button>
-<<<<<<< HEAD
-          <div className="absolute top-full left-0 w-48 bg-zinc-900 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-=======
           <div className="absolute top-full left-0 w-56 bg-zinc-900 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
->>>>>>> 1d1f998a0f24ed4c069103bc379e110b52e77bc5
             <div className="p-4 space-y-2">
               {/* Subcategorias podem ser adicionadas aqui */}
               <a href="#" className="block text-zinc-400 hover:text-white transition-colors">
@@ -40,8 +36,4 @@ export function CategoryMenu() {
       ))}
     </nav>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1d1f998a0f24ed4c069103bc379e110b52e77bc5
