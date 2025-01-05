@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Resetando margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Garantindo que o body ocupe 100% da altura da tela */
+  html, body {
+    height: 100%; /* Garantir que o corpo ocupe 100% da altura da tela */
+    background-color: #f0f0f0; /* Definindo um fundo claro, ajuste conforme necessário */
+    font-family: 'Arial', sans-serif; /* Usando uma fonte padrão */
+    display: flex;
+    flex-direction: column; /* Organizando o layout em colunas */
+  }
+  
+  /* Este estilo garante que o body ocupe toda a altura disponível */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantindo que ocupe pelo menos 100% da altura da tela */
+  }
+  
+  /* Ajustando o conteúdo centralizado dentro do body */
+  main {
+    flex: 1; /* Faz com que o conteúdo ocupe o restante da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
