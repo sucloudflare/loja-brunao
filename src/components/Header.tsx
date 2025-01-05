@@ -8,8 +8,8 @@ interface HeaderProps {
 
 export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
   return (
-    <header className="bg-black/95 backdrop-blur-sm h-screen flex fixed w-full z-50 text-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <header className="bg-black/95 backdrop-blur-sm fixed w-full z-50 text-white">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <Menu className="h-6 w-6 lg:hidden" />
@@ -31,7 +31,7 @@ export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
             >
               <ShoppingBag className="h-5 w-5 text-gray-300 hover:text-white" />
               {cartItemsCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-3 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                   {cartItemsCount}
                 </span>
               )}
