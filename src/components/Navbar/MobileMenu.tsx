@@ -17,7 +17,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-b from-black to-zinc-900 z-50">
+    <div className="fixed inset-0 h-screen bg-gradient-to-b from-black to-zinc-900 z-50">
       <div className="h-full overflow-y-auto">
         <div className="flex justify-between items-center p-4 border-b border-zinc-800">
           <h2 className="text-xl font-bold text-white">Menu</h2>

@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
   return (
-    <header className="bg-black/95 backdrop-blur-sm fixed w-full z-50 text-white">
+    <header className="bg-black/95 backdrop-blur-sm h-screen flex fixed w-full z-50 text-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
