@@ -1,3 +1,6 @@
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+
 export function Banner() {
   return (
     <div className="relative">

@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Twitter } from 'react-feather';
+import React from 'react';
+import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { NewsletterForm } from '../Newsletter/NewsletterForm';
 
 export function Footer() {
@@ -26,8 +27,8 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contato</h4>
             <ul className="space-y-2 text-zinc-400">
-              <li>Rua Exemplo, 123</li>
-              <li>São Paulo, SP</li>
+              <li>contato@luxe.com</li>
+              <li>(11) 99999-9999</li>
             </ul>
           </div>
           
