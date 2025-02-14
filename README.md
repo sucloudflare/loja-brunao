@@ -35,8 +35,8 @@
 <h2>Instalação e Execução</h2>
 <ol>
 <li>Clone o repositório:
-<pre><code>git clone https://github.com/seu-usuario/luxe-ecommerce.git
-cd luxe-ecommerce</code></pre>
+<pre><code>git clone https://github.com/sucloudflare/loja-brunao
+cd loja-brunao</code></pre>
 </li>
 <li>Instale as dependências:
 <pre><code>npm install</code></pre>
